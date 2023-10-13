@@ -2,13 +2,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "target": "es6", // Versão do JavaScript alvo.
+    "module": "commonjs", // Sistema de módulos (pode ser "esnext" ou "commonjs").
     "outDir": "./out-tsc/app",
     "types": []
   },
-  "files": [
-    "src/main.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts"]
 }

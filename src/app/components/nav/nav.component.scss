@@ -15,13 +15,15 @@ nav {
   }
 
   .navbar {
-    width: 40%;
+    width: 35%;
     height: 100%;
     //background-color: #393939;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 26px;
 
     ul {
       width: 100%;
@@ -35,11 +37,17 @@ nav {
       text-transform: uppercase;
       font-weight: bold;
 
-      cursor: pointer;
-
       li {
         a {
           text-decoration: none;
+
+          cursor: pointer;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: #39789a;
+          }
         }
       }
     }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TesteRotaComponent } from './teste-rota.component';
+import { PostCardComponent } from './post-card.component';
 
-describe('TesteRotaComponent', () => {
-  let component: TesteRotaComponent;
-  let fixture: ComponentFixture<TesteRotaComponent>;
+describe('PostCardComponent', () => {
+  let component: PostCardComponent;
+  let fixture: ComponentFixture<PostCardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TesteRotaComponent]
+      declarations: [PostCardComponent]
     });
-    fixture = TestBed.createComponent(TesteRotaComponent);
+    fixture = TestBed.createComponent(PostCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
