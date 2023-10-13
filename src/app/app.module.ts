@@ -10,6 +10,7 @@ import { CreateComponent } from './components/pages/create/create.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { PostDetailsComponent } from './components/pages/post-details/post-details.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PostDetailsComponent } from './components/pages/post-details/post-detai
     AboutComponent,
     PostCardComponent,
     PostDetailsComponent,
+    ProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
