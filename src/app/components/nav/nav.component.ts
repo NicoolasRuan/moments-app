@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent {}
+export class NavComponent {
+  isResponsive = false;
+
+  toggleNavigation() {
+    this.isResponsive = !this.isResponsive;
+  }
+}

@@ -3,29 +3,21 @@
 nav {
   width: 100vw;
   height: 14%;
-
   background-color: $primary-background-color;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   .logo {
-    width: 10%;
-    height: 100%;
-    //background-color: #393939;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 26px;
-
     a {
       text-decoration: none;
+      list-style: none;
+
+      font-size: 30px;
+
       h1 {
-        cursor: pointer;
         transition: all 0.3s ease-in-out;
+
         &:hover {
           color: $primary-color;
         }
@@ -36,13 +28,10 @@ nav {
   .navbar {
     width: 35%;
     height: 100%;
-    //background-color: #393939;
-
+    font-size: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 26px;
 
     ul {
       width: 100%;
@@ -50,50 +39,176 @@ nav {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-
       list-style: none;
-
       text-transform: uppercase;
       font-weight: bold;
-
       text-decoration: none;
 
       li {
         text-decoration: none;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         a {
           text-decoration: none;
-
           list-style: none;
-
           cursor: pointer;
-
           transition: all 0.3s ease-in-out;
 
           &:hover {
             color: $primary-color;
           }
+        }
+      }
+      .profile {
+        a .icone-svg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-          // svg icon profile com <i>
+          fill: $secondary-color;
 
-          // icone com <img>
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            fill: $primary-color;
+          }
         }
       }
     }
   }
+
+  .mobile-navbar {
+    display: none;
+
+    position: fixed; /* Fixa a barra de navegação na parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+
+    overflow: hidden;
+    transition: 0.5s; /* Adiciona uma transição suave para mostrar/ocultar a barra de navegação */
+    background-color: $primary-background-color; /* Defina a cor de fundo desejada */
+
+    &.responsive {
+      // Estilos para telas pequenas
+      display: flex; // Mostrar a barra de navegação
+
+      justify-content: center;
+      align-items: flex-start;
+
+      height: 100%;
+
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .mobile-container {
+      padding: 20px;
+    }
+    // Estilos para o botão de menu quando a barra de navegação está oculta
+    &.responsive .menu-toggle {
+      display: block; // Mostrar o botão de menu
+    }
+
+    ul {
+      width: 200px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+
+      gap: 20px;
+
+      padding: 50px;
+
+      li {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        text-decoration: none;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none; // Esconder o botão de menu
+
+    width: 50px;
+    height: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    //border: 1px solid $secondary-color;
+
+    border: none;
+    background-color: transparent;
+
+    span {
+      font-size: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // .menu-toggle {
+  //   display: block; /* Mostrar o botão de menu */
+  //   position: absolute;
+  //   top: 10px;
+  //   right: 10px; /* Posicione o botão de menu no canto superior direito da barra de navegação móvel */
+
+  //   span {
+  //     font-size: 30px; /* Tamanho do ícone de menu */
+  //   }
+  // }
 }
 
-// profile icon scss:
+@media screen and (max-width: 1050px) {
+  nav .logo a h1 {
+    font-size: 28px;
+  }
 
-nav .navbar ul .profile a .icone-svg {
-  transition: all 0.3s ease-in-out;
+  nav .navbar ul li a {
+    font-size: 22px;
+  }
 
-  width: 38px; /* Largura do ícone, ajuste conforme necessário */
-  height: 38px;
-
-  fill: #ffffff;
+  nav .navbar ul .profile a svg {
+    width: 24px;
+  }
 }
 
-nav .navbar ul .profile a .icone-svg:hover {
-  fill: $primary-color;
+// Estilos para telas pequenas (por exemplo, telas menores que 768px)
+@media screen and (max-width: 900px) {
+  nav {
+    .logo a h1 {
+      font-size: 30px;
+    }
+    .navbar {
+      display: none; // Esconda a barra de navegação principal
+    }
+
+    .menu-toggle {
+      display: block; // Mostre o botão de menu
+    }
+
+    // Estilos para o menu quando aberto
+    .menu-open {
+      display: block;
+    }
+  }
 }
