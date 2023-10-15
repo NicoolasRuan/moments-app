@@ -11,6 +11,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { PostDetailsComponent } from './components/pages/post-details/post-details.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
     PostCardComponent,
     PostDetailsComponent,
     ProfileComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
   }
 
   .post-card {
@@ -26,4 +26,8 @@
       margin-bottom: 20px;
     }
   }
+}
+
+.spacer {
+  height: 100px; /* Ajuste a altura conforme necessário para empurrar o footer para baixo */
 }

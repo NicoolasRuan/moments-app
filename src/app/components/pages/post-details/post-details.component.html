@@ -1,2 +1,26 @@
 <app-nav></app-nav>
-<p>post-details works!</p>
+<div class="container">
+  <div class="content">
+    <div class="image"></div>
+
+    <div class="post-info">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.description }}</p>
+    </div>
+
+    <div class="comments-section">
+      <div class="comment-form">
+        <h3>Leave your comment!</h3>
+        <form>
+          <textarea name="comment" id="comment" cols="30" rows="5"> </textarea>
+          <button type="submit">submit</button>
+        </form>
+      </div>
+      <div class="comments">
+        <h3>Comments</h3>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
