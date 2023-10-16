@@ -1,6 +1,5 @@
-<app-nav></app-nav>
 <div class="container">
-  <div class="content" *ngIf="posts; else noPosts">
+  <div class="content" *ngIf="posts.length != 0; else noPosts">
     <div class="post-card">
       <app-post-card [post]="post" *ngFor="let post of posts"></app-post-card>
     </div>
@@ -13,7 +12,7 @@
     <div class="content">
       <p>sem posts</p>
     </div>
+
+    <div class="spacer"></div>
   </ng-template>
 </div>
-
-<app-footer></app-footer>
